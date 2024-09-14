@@ -125,10 +125,13 @@ h2, h3 {
 
 .product {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
 
 .items {
+    display: flex;
+    flex-direction: row; /* Default direction for larger screens */
+    flex-wrap: wrap; /* Allow wrapping if needed */
     margin: 10px;
     padding: 50px;
     text-align: center;
@@ -147,18 +150,16 @@ h2, h3 {
     font-weight: bold;
 }
 
-.items a :hover{
-    background-color: whitesmoke;
+.items a:hover {
+    background: linear-gradient(to bottom, #fff8e1, #f5b742);
+    padding: 20px;
 }
 
-@media (max-width: 768px) {
-    .products {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
-    }
 
-    .item {
-        flex: 1 1 100%; /* Full width for each item */
-        max-width: 100%; /* Ensure items take full width */
+@media (max-width: 1500px) {
+    .items {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
     }
 }
+
