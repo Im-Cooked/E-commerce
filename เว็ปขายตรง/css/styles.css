@@ -49,10 +49,10 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 1rem;
-    background-color: bisque;
+    padding: 2rem;
     text-align: center; 
     flex:1;
+    background: linear-gradient(to bottom, #f5e5c0, #e8b573);
 
 }
 
