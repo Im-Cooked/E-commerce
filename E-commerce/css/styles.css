@@ -11,7 +11,7 @@ body {
 }
 
 body > main {
-    flex: 1; /* This makes the main area take up all available space */
+    flex: 1;
     padding: 1rem;
     background-color: bisque;
 }
@@ -31,21 +31,23 @@ header h1 {
 
 nav ul {
     list-style: none;
-    padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 10px;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    background-color: gray;
 }
 
 main {
@@ -125,41 +127,46 @@ h2, h3 {
 
 .product {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    flex-direction: row;
 }
 
 .items {
     display: flex;
-    flex-direction: row; /* Default direction for larger screens */
-    flex-wrap: wrap; /* Allow wrapping if needed */
-    margin: 10px;
-    padding: 50px;
+    flex-direction: column;
+    margin: 50px;
+    padding: 20px;
+    height: 150px;
+    width: 150px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .items img {
     cursor: pointer;
     width: 100px;
+    margin: auto;
 }
 
 .items a {
-    display: block;
-    margin-top: 5px;
     text-decoration: none;
     color: #000;
     font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
 }
 
 .items a:hover {
     background: linear-gradient(to bottom, #fff8e1, #f5b742);
-    padding: 20px;
 }
 
 
-@media (max-width: 1500px) {
-    .items {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        padding: 20px; /* Adjust padding for smaller screens */
+@media (max-width: 700px) {
+    .product {
+        flex-direction: column; /* Change to column layout */
+        align-items: center; /* Center items horizontally in column layout */
     }
 }
+
 
