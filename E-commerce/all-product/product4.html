@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>รายละเอียดสินค้า</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Potion of Animal Speaking - รายละเอียดสินค้า</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -19,13 +20,25 @@
         </nav>
     </header>
     
-    <main>
-        <h2>Potion of Animal Speaking</h2>
-        <img src="../หมวด1/product4.png" alt="สินค้า 4">
-        <p>ยาชนิดนี้มีสรรพคุณ ทำให้ผู้ใช้คุยกับสัตว์ได้</p>
-        <p>ราคา: 130 บาท</p>
-        <a href="../cart.html"><button>เพิ่มไปยังตะกร้า</button></a>
-        </main>
+    <main class="product-detail">
+        <section class="product-info">
+            <h2>Potion of Animal Speaking</h2>
+            <div class="product-image">
+                <img src="../หมวด1/product4.png" alt="Potion of Animal Speaking">
+            </div>
+            <p>ยาชนิดนี้มีสรรพคุณทำให้ผู้ใช้สามารถพูดคุยกับสัตว์ได้ โดยภาษาจะได้ยินนั้นจะเป็นภาษาอังกฤษ ภาษาเวอร์ชั่นอื่นยังอยู่ในการพัฒนา</p>
+            <p class="price">ราคา: <strong>130 บาท</strong></p>
+
+            <div class="product-buttons">
+                <a href="../cart.html">
+                    <button>เพิ่มไปยังตะกร้า</button>
+                </a>
+                <a href="../category.html">
+                    <button class="back-button">กลับไปยังหมวดหมู่</button>
+                </a>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>© 2024 ร้านค้าออนไลน์. สงวนลิขสิทธิ์.</p>

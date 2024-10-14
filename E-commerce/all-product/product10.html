@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>รายละเอียดสินค้า</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <title>Scroll of Darkvision - รายละเอียดสินค้า</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -19,12 +21,24 @@
         </nav>
     </header>
     
-    <main>
-        <h2>Scroll of Darkvision</h2>
-        <img src="../หมวด2/product10.png" alt="สินค้า 10">
-        <p>เมื่อใช้งาน ทำให้ผู้ใช้สามารถมองเห็นในที่มือได้ ในระยะ 12 เมตร</p>
-        <p>ราคา: 265 บาท</p>
-        <a href="../cart.html"><button>เพิ่มไปยังตะกร้า</button></a>
+    <main class="product-detail">
+        <section class="product-info">
+            <h2>Scroll of Darkvision</h2>
+            <div class="product-image">
+                <img src="../หมวด2/product10.png" alt="Scroll of Darkvision">
+            </div>
+            <p>เมื่อใช้งาน ทำให้ผู้ใช้สามารถมองเห็นในที่มืดได้ในระยะ 12 เมตร ด้วยเวทย์นี้ ผู้ใช้จะไม่ถูกจำกัดด้วยความมืด สามารถสำรวจพื้นที่ที่ไม่มีแสงสว่างได้อย่างมีประสิทธิภาพ</p>
+            <p class="price">ราคา: <strong>265 บาท</strong></p>
+
+            <div class="product-buttons">
+                <a href="../cart.html">
+                    <button>เพิ่มไปยังตะกร้า</button>
+                </a>
+                <a href="../category.html">
+                    <button class="back-button">กลับไปยังหมวดหมู่</button>
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer>
