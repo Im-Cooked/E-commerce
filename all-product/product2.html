@@ -28,7 +28,9 @@
             </div>
             <p>ทำให้ผู้ใช้เบาอย่างขนนก เมื่อผู้ลอยอยู่ในอากาศผู้ใช้จะค่อยๆหล่นลงมาอย่างช้าๆ สามารถใช้เพื่อป้องกันการตกจากที่สูง โดยยาจะมี่ผล 5-6 นาที</p>
             <p class="price">ราคา: <strong>130 บาท</strong></p>
-
+            <div class="item">
+                <input type="number" min="1" value="1" class="quantity" aria-label="จำนวนสินค้า">
+            </div>
             <div class="product-buttons">
                 <a href="../cart.html">
                     <button>เพิ่มไปยังตะกร้า</button>
@@ -45,3 +47,37 @@
     </footer>
 </body>
 </html>
+
+<script>
+    // ฟังก์ชันสำหรับอัปเดตราคา
+    function updatePrice() {
+        const quantityInput = document.querySelector('.quantity');
+        const priceElement = document.querySelector('.price strong');
+        const unitPrice = 130; // ราคาเดิมของสินค้า
+
+        // คำนวณราคาทั้งหมด
+        const totalPrice = unitPrice * quantityInput.value;
+        priceElement.textContent = `${totalPrice} บาท`;
+    }
+
+    // เพิ่มการฟังการเปลี่ยนแปลงใน input
+    document.querySelector('.quantity').addEventListener('input', updatePrice);
+</script>
+</body>
+</html>
+
+<script>
+    // ฟังก์ชันสำหรับอัปเดตราคา
+    function updatePrice() {
+        const quantityInput = document.querySelector('.quantity');
+        const priceElement = document.querySelector('.price strong');
+        const unitPrice = 125; // ราคาเดิมของสินค้า
+
+        // คำนวณราคาทั้งหมด
+        const totalPrice = unitPrice * quantityInput.value;
+        priceElement.textContent = `${totalPrice} บาท`;
+    }
+
+    // เพิ่มการฟังการเปลี่ยนแปลงใน input
+    document.querySelector('.quantity').addEventListener('input', updatePrice);
+</script>

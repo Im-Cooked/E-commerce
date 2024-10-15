@@ -28,7 +28,9 @@
             </div>
             <p>ยาชนิดนี้มีสรรพคุณช่วยรักษาอาการบาดเจ็บทางกายได้ในระดับกลาง รวมทั้งรักษารอยแผลจากการเผาไหม้ได้ สามารถใช้ราดบริเวณบาดแผล หรือดื่มก็ได้ โดยจะใช้เวลาออกฤทธิ์ประทาณ 1-2 นาที</p>
             <p class="price">ราคา: <strong>125 บาท</strong></p>
-
+    <div class ="item">
+        <input type="number" min="1" value="1" class="quantity" aria-label="จำนวนสินค้า">
+    </div>
             <div class="product-buttons">
                 <a href="../cart.html">
                     <button>เพิ่มไปยังตะกร้า</button>
@@ -46,3 +48,18 @@
 </body>
 </html>
 
+<script>
+    // ฟังก์ชันสำหรับอัปเดตราคา
+    function updatePrice() {
+        const quantityInput = document.querySelector('.quantity');
+        const priceElement = document.querySelector('.price strong');
+        const unitPrice = 125; // ราคาเดิมของสินค้า
+
+        // คำนวณราคาทั้งหมด
+        const totalPrice = unitPrice * quantityInput.value;
+        priceElement.textContent = `${totalPrice} บาท`;
+    }
+
+    // เพิ่มการฟังการเปลี่ยนแปลงใน input
+    document.querySelector('.quantity').addEventListener('input', updatePrice);
+</script>

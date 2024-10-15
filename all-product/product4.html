@@ -27,8 +27,10 @@
                 <img src="../หมวด1/product4.png" alt="Potion of Animal Speaking">
             </div>
             <p>ยาชนิดนี้มีสรรพคุณทำให้ผู้ใช้สามารถพูดคุยกับสัตว์ได้ โดยภาษาจะได้ยินนั้นจะเป็นภาษาอังกฤษ ภาษาเวอร์ชั่นอื่นยังอยู่ในการพัฒนา</p>
-            <p class="price">ราคา: <strong>130 บาท</strong></p>
-
+            <p class="price">ราคา: <strong>250 บาท</strong></p>
+            <div class ="item">
+                <input type="number" min="1" value="1" class="quantity" aria-label="จำนวนสินค้า">
+            </div>
             <div class="product-buttons">
                 <a href="../cart.html">
                     <button>เพิ่มไปยังตะกร้า</button>
@@ -45,3 +47,19 @@
     </footer>
 </body>
 </html>
+
+<script>
+    // ฟังก์ชันสำหรับอัปเดตราคา
+    function updatePrice() {
+        const quantityInput = document.querySelector('.quantity');
+        const priceElement = document.querySelector('.price strong');
+        const unitPrice = 250; // ราคาเดิมของสินค้า
+
+        // คำนวณราคาทั้งหมด
+        const totalPrice = unitPrice * quantityInput.value;
+        priceElement.textContent = `${totalPrice} บาท`;
+    }
+
+    // เพิ่มการฟังการเปลี่ยนแปลงใน input
+    document.querySelector('.quantity').addEventListener('input', updatePrice);
+</script>

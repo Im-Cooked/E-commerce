@@ -28,7 +28,9 @@
             </div>
             <p>ยาชนิดนี้มีสรรพคุณทำให้ผู้ใช้ล่องหนได้ 5 นาที เมื่อยาเริ่มใช้งานผู้ใช้จะไม่สามารถถูกเห็นในทันที ทำให้สามารถหลีกเลี่ยงการตรวจจับหรือผู้ที่ไม่ต้องการให้เห็นได้ โดยในช่วงเวลานี้ ผู้ใช้ยังสามารถเคลื่อนไหวหรือทำกิจกรรมต่าง ๆ ได้ตามปกติ</p>
             <p class="price">ราคา: <strong>2500 บาท</strong></p>
-
+            <div class ="item">
+                <input type="number" min="1" value="1" class="quantity" aria-label="จำนวนสินค้า">
+            </div>
             <div class="product-buttons">
                 <a href="../cart.html">
                     <button>เพิ่มไปยังตะกร้า</button>
@@ -45,3 +47,19 @@
     </footer>
 </body>
 </html>
+
+<script>
+    // ฟังก์ชันสำหรับอัปเดตราคา
+    function updatePrice() {
+        const quantityInput = document.querySelector('.quantity');
+        const priceElement = document.querySelector('.price strong');
+        const unitPrice = 2500; // ราคาเดิมของสินค้า
+
+        // คำนวณราคาทั้งหมด
+        const totalPrice = unitPrice * quantityInput.value;
+        priceElement.textContent = `${totalPrice} บาท`;
+    }
+
+    // เพิ่มการฟังการเปลี่ยนแปลงใน input
+    document.querySelector('.quantity').addEventListener('input', updatePrice);
+</script>

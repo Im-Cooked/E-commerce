@@ -29,7 +29,9 @@
             </div>
             <p>เมื่อสวมใส่ จะทำให้ผู้ใช้ไม่ถูกทำร้ายจากสัตว์ป่าทุกชนิด เป็นเครื่องรางที่มีพลังป้องกัน ซึ่งจะทำให้ผู้ใช้รู้สึกปลอดภัยจากการโจมตีของสัตว์ป่า เหมาะสำหรับนักผจญภัยที่ต้องเดินทางผ่านป่าและพื้นที่อันตราย</p>
             <p class="price">ราคา: <strong>14,999 บาท</strong></p>
-
+            <div class ="item">
+                <input type="number" min="1" value="1" class="quantity" aria-label="จำนวนสินค้า">
+            </div>
             <div class="product-buttons">
                 <a href="../cart.html">
                     <button>เพิ่มไปยังตะกร้า</button>
@@ -46,3 +48,19 @@
     </footer>
 </body>
 </html>
+
+<script>
+    // ฟังก์ชันสำหรับอัปเดตราคา
+    function updatePrice() {
+        const quantityInput = document.querySelector('.quantity');
+        const priceElement = document.querySelector('.price strong');
+        const unitPrice = 14999; // ราคาเดิมของสินค้า
+
+        // คำนวณราคาทั้งหมด
+        const totalPrice = unitPrice * quantityInput.value;
+        priceElement.textContent = `${totalPrice} บาท`;
+    }
+
+    // เพิ่มการฟังการเปลี่ยนแปลงใน input
+    document.querySelector('.quantity').addEventListener('input', updatePrice);
+</script>
