@@ -12,7 +12,6 @@ body {
     background-color: #f5f5f5;
 }
 
-/* Header */
 header {
     display: flex;
     flex-direction: column;
@@ -55,7 +54,6 @@ main {
     text-align: center;
 }
 
-/* Footer */
 footer {
     background-color: #333;
     color: #fff;
@@ -63,7 +61,6 @@ footer {
     padding: 10px;
 }
 
-/* Buttons */
 button {
     background-color: #28a745;
     color: #fff;
@@ -72,7 +69,6 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-family: 'Sarabun', sans-serif;
     margin: 25px 10px;
 }
 
@@ -80,7 +76,6 @@ button:hover {
     background-color: #218838;
 }
 
-/* Product Items */
 .product {
     display: flex;
     flex-wrap: wrap;
@@ -121,6 +116,9 @@ button:hover {
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .items img {
@@ -155,24 +153,25 @@ button:hover {
     text-align: center;
 }
 
-/* ปุ่มซื้อเลย! */
 .buy-now {
+    display: inline-block;
     background-color: green;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 20px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 20px;
     transition: background-color 0.3s;
+    
 }
 
 .buy-now:hover {
     background-color: #cc5200;
 }
 
-/* Responsive Design */
 @media (max-width: 700px) {
+
     .product {
         flex-direction: column;
         align-items: center;
