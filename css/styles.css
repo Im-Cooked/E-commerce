@@ -121,6 +121,9 @@ button:hover {
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .items img {
@@ -165,6 +168,9 @@ button:hover {
     cursor: pointer;
     margin-top: 10px;
     transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .buy-now:hover {
